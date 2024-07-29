@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.5) url(img/background.jpg) no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    background-blend-mode: color;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    width: 200px;
+    margin: 10px;
+}
+
+.login-body {
+    background-color: rgba(0, 0, 0, 0.799);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+form {
+    width: 100%;
+    margin: 10px;
+    margin-top: -10px;
+    padding: 10px;
+}
+
+.login-body h2 {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.input-box {
+    margin: 20px 0;
+    width: 100%;
+    color: rgb(143, 143, 143);
+}
+
+.input-box input {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.aviso {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    font-size: 0.6em;
+}
+
+input[type='submit'] {
+    background-color: rgba(255, 0, 0, 0.764);
+    font-weight: bold;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+input[type='submit']:hover {
+    color: rgba(255, 0, 0, 0.764);
+    background-color: white;
+}
+
+#container-info {
+    padding: 0 16px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: -5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7em;
+}
+
+p#checkbox {
+    display: flex;
+}
+
+input[type='checkbox'] {
+    width: 15px;
+    margin-right: 5px;
+    margin-left: -1px;
+}
+
+.input-box img {
+    width: 15px;
+}
+
+.facebook {
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.assine {
+    font-size: 0.8em;
+}
+
+.assine a {
+    color: white;
+}
+
+.reCAPTCHA {
+    font-size: 0.8em;
+}
+
+.reCAPTCHA a {
+    color: rgba(42, 98, 253, 0.755);
+}
