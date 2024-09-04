@@ -4,8 +4,10 @@
 
 <a href="https://mateusskv9.github.io/projects/Simple_Login_2 - Green_Black/">02 - Formulário simples (green_black) animado</a>
 
-<a href="https://mateusskv9.github.io/projects/IT-Solutions/">03 - IT Solutions</a>
+<a href="https://mateusskv9.github.io/projects/it-solutions/">03 - IT Solutions</a>
 
-<a href="https://mateusskv9.github.io/projects/Spotify-Clone/">04 - Spotify Clone</a>
+<a href="https://mateusskv9.github.io/projects/spotify-clone/">04 - Spotify Clone</a>
 
-<a href="https://mateusskv9.github.io/projects/Netflix-Login/">05 - Netflix-Login</a>
+<a href="https://mateusskv9.github.io/projects/netflix-login/">05 - Netflix-Login</a>
+
+<a href="https://mateusskv9.github.io/projects/simple_calculator/">06 - Simple Calculator</a>
