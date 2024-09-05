@@ -121,12 +121,13 @@ p#result {
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    transition: all .25s ease;
+    transition: transform .25s ease;
     will-change: transform;
 }
 
 .tecla:hover {
     transform: scale(0.95);
+    border: 3px solid #ff8a00;
     cursor: pointer;
 }
 
@@ -157,4 +158,10 @@ p#result {
     margin-right: -5px;
     width: 71.81px;
     height: 55px;
+}
+
+.equal:hover {
+    background-color: white;
+    border: 3px solid #ff8a00;
+
 }
