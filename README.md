@@ -1,8 +1,8 @@
 # projects
 
-<a href="https://mateusskv9.github.io/projects/Simple_Login_1 - Pink_Purple/">01 - Formulário simples (pink-purple) com validação</a>
+<a href="https://mateusskv9.github.io/projects/1-simple_login_1-pink_purple/index.html">01 - Formulário simples (pink-purple) com validação</a>
 
-<a href="https://mateusskv9.github.io/projects/Simple_Login_2 - Green_Black/">02 - Formulário simples (green_black) animado</a>
+<a href="https://mateusskv9.github.io/projects/Simple_Login_2 - Green_Black/index">02 - Formulário simples (green_black) animado</a>
 
 <a href="https://mateusskv9.github.io/projects/it-solutions/">03 - IT Solutions</a>
 
