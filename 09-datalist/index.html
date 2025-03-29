@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Datalist</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Datalist</h1>
+
+		<section class="section-no-js">
+			<h3>Susgestões sem JavaScript</h3>
+			<form action="" class="linguages">
+				<label for="linguages">Qual é sua linguagem de programação <strong>favorita</strong>?</label>
+				<input type="text" name="linguages" id="linguages" list="linguages-list" placeholder="Tipy a language" />
+				<datalist id="linguages-list">
+					<option value="javascript"></option>
+					<option value="c"></option>
+					<option value="c++"></option>
+					<option value="c#"></option>
+					<option value="java"></option>
+					<option value="ruby"></option>
+					<option value="kotlin"></option>
+				</datalist>
+			</form>
+		</section>
+
+		<!------------------ SUGGESTIONS VIA JAVASCRIPT  ------------------>
+
+		<style>
+			.container {
+				width: 100%;
+				position: relative;
+			}
+
+			input {
+				flex-grow: 1;
+				width: 100%;
+				padding: 8px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+
+			.suggestions {
+				position: absolute;
+
+				border-radius: 0px 0px 10px 10px;
+				width: 100%;
+				background: white;
+				border: 1px solid #ccc;
+				border-top: none;
+				max-height: 70px;
+				overflow-y: auto;
+				display: none;
+			}
+
+			.suggestions li {
+				padding: 8px;
+				cursor: pointer;
+				list-style: none;
+			}
+
+			.suggestions li:hover {
+				background: #f0f0f0;
+			}
+		</style>
+
+		<section>
+			<h3>Sugestões com JavaScript</h3>
+			<form class="container">
+				<input type="text" id="input-lang" placeholder="Digite uma linguagem" />
+				<ul class="suggestions" id="suggestions"></ul>
+			</form>
+		</section>
+
+		<script>
+			const languages = ["JavaScript", "Java", "Python", "C", "C++", "C#", "Ruby", "Kotlin", "Go", "Swift"];
+			const input = document.getElementById("input-lang");
+			const suggestions = document.getElementById("suggestions");
+
+			function updateSuggestions() {
+				const query = input.value.toLowerCase();
+				suggestions.innerHTML = "";
+
+				const filtered = languages.filter((lang) => lang.toLowerCase().includes(query));
+
+				if (filtered.length === 0 || query === "") {
+					suggestions.style.display = "none";
+					return;
+				}
+
+				filtered.forEach((lang) => {
+					const li = document.createElement("li");
+					li.textContent = lang;
+					li.addEventListener("click", () => {
+						input.value = lang;
+						suggestions.style.display = "none";
+					});
+					suggestions.appendChild(li);
+				});
+
+				suggestions.style.display = "block";
+			}
+
+			input.addEventListener("input", updateSuggestions);
+
+			document.addEventListener("click", (e) => {
+				if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+					suggestions.style.display = "none";
+				}
+			});
+		</script>
+	</body>
+</html>
