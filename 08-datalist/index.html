@@ -29,7 +29,29 @@
 		</section>
 
 		<section>
-			<h3></h3>
+			<h3>Sugestões com JavaScript</h3>
+			<form class="container">
+				<input type="text" id="input-lang" placeholder="Digite uma linguagem" />
+				<ul class="suggestions" id="suggestions"></ul>
+			</form>
+		</section>
+
+		<section>
+			<h3>Sugestões de datas</h3>
+			<input type="date" name="date" id="date" list="date-list" title="date" />
+
+      <small>Por algum motivo buga quando clica em "Outros"</small>
+
+			<datalist id="date-list">
+				<option value="2025-01-01"></option>
+				<option value="2025-01-02"></option>
+				<option value="2025-01-03"></option>
+				<option value="2025-01-04"></option>
+				<option value="2025-01-05"></option>
+			</datalist>
+		</section>
+
+		<section>
 			<label for="grade">Nota</label>
 			<div class="container-grade">
 				<input type="range" name="grade" id="grade" list="grade-list" min="0" max="100" />
@@ -55,14 +77,6 @@
 		</section>
 
 		<!------------------ SUGGESTIONS VIA JAVASCRIPT  ------------------>
-
-		<section>
-			<h3>Sugestões com JavaScript</h3>
-			<form class="container">
-				<input type="text" id="input-lang" placeholder="Digite uma linguagem" />
-				<ul class="suggestions" id="suggestions"></ul>
-			</form>
-		</section>
 
 		<script src="script.js"></script>
 	</body>
