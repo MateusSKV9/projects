@@ -13,7 +13,9 @@
 			<h3>Susgestões sem JavaScript</h3>
 			<form action="" class="linguages">
 				<label for="linguages">Qual é sua linguagem de programação <strong>favorita</strong>?</label>
-				<input type="text" name="linguages" id="linguages" list="linguages-list" placeholder="Tipy a language" />
+				<div>
+					<input type="text" name="linguages" id="linguages" list="linguages-list" placeholder="Type a language" />
+				</div>
 				<datalist id="linguages-list">
 					<option value="javascript"></option>
 					<option value="c"></option>
@@ -26,45 +28,33 @@
 			</form>
 		</section>
 
+		<section>
+			<h3></h3>
+			<label for="grade">Nota</label>
+			<div class="container-grade">
+				<input type="range" name="grade" id="grade" list="grade-list" min="0" max="100" />
+			</div>
+
+			<datalist id="grade-list">
+				<option value="0">0</option>
+				<option value="20">20</option>
+				<option value="40">40</option>
+				<option value="60">60</option>
+				<option value="80">80</option>
+				<option value="100">100</option>
+			</datalist>
+
+			<progress value="" min="00" max="100"></progress>
+			<span id="progress-value"></span>
+			<span id="success">Sucesso!✅</span>
+
+			<div class="container-buttons">
+				<button id="diminuir" type="button">Diminuir ➖</button>
+				<button id="aumentar" type="button">Aumentar ➕</button>
+			</div>
+		</section>
+
 		<!------------------ SUGGESTIONS VIA JAVASCRIPT  ------------------>
-
-		<style>
-			.container {
-				width: 100%;
-				position: relative;
-			}
-
-			input {
-				flex-grow: 1;
-				width: 100%;
-				padding: 8px;
-				border: 1px solid #ccc;
-				border-radius: 4px;
-			}
-
-			.suggestions {
-				position: absolute;
-
-				border-radius: 0px 0px 10px 10px;
-				width: 100%;
-				background: white;
-				border: 1px solid #ccc;
-				border-top: none;
-				max-height: 70px;
-				overflow-y: auto;
-				display: none;
-			}
-
-			.suggestions li {
-				padding: 8px;
-				cursor: pointer;
-				list-style: none;
-			}
-
-			.suggestions li:hover {
-				background: #f0f0f0;
-			}
-		</style>
 
 		<section>
 			<h3>Sugestões com JavaScript</h3>
@@ -74,42 +64,6 @@
 			</form>
 		</section>
 
-		<script>
-			const languages = ["JavaScript", "Java", "Python", "C", "C++", "C#", "Ruby", "Kotlin", "Go", "Swift"];
-			const input = document.getElementById("input-lang");
-			const suggestions = document.getElementById("suggestions");
-
-			function updateSuggestions() {
-				const query = input.value.toLowerCase();
-				suggestions.innerHTML = "";
-
-				const filtered = languages.filter((lang) => lang.toLowerCase().includes(query));
-
-				if (filtered.length === 0 || query === "") {
-					suggestions.style.display = "none";
-					return;
-				}
-
-				filtered.forEach((lang) => {
-					const li = document.createElement("li");
-					li.textContent = lang;
-					li.addEventListener("click", () => {
-						input.value = lang;
-						suggestions.style.display = "none";
-					});
-					suggestions.appendChild(li);
-				});
-
-				suggestions.style.display = "block";
-			}
-
-			input.addEventListener("input", updateSuggestions);
-
-			document.addEventListener("click", (e) => {
-				if (!input.contains(e.target) && !suggestions.contains(e.target)) {
-					suggestions.style.display = "none";
-				}
-			});
-		</script>
+		<script src="script.js"></script>
 	</body>
 </html>
