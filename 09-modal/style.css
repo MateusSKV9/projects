@@ -1,0 +1,50 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: self-start;
+	min-height: 100vh;
+}
+
+#modal {
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#modal::backdrop {
+	background: rgb(0 0 0 / 0.3);
+}
+.open {
+	margin-top: 20px;
+	background-color: #00e213;
+}
+.close {
+	background-color: #da2c00;
+}
+
+button {
+	all: unset;
+	background-color: rgb(0, 0, 0);
+	padding: 7px 10px;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+	transition: all 0.1s ease;
+
+	margin: 2px;
+}
+
+button:hover {
+	cursor: pointer;
+	transform: translateY(-5px);
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.718);
+}
+
+button:active {
+	transform: scale(0.993);
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}

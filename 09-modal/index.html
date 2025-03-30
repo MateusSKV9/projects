@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<button class="open" type="button">Abrir modal</button>
+
+		<dialog id="modal">
+			<h2>Título do modal</h2>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui laboriosam a eveniet odit quia labore, libero
+				voluptate corrupti? Iusto provident doloremque consectetur quo doloribus voluptatum pariatur quasi. Maxime cum
+				cupiditate assumenda laudantium laborum unde libero eligendi tenetur deleniti inventore error ipsam accusantium
+				officiis dicta magni corrupti consequuntur, fugiat totam iusto autem vero! Beatae impedit aspernatur ea pariatur
+				ullam laborum, sit reiciendis doloribus. Dignissimos ipsum unde animi dolorem consectetur tempore dolore ex ut,
+				cum in quis ab esse magnam ea culpa reiciendis quam rerum repellat id alias mollitia quia praesentium quod quo?
+				Aperiam ut animi perspiciatis nemo cum, quisquam sint maxime?
+			</p>
+			<button class="close" type="button">Fechar modal</button>
+		</dialog>
+
+		<script>
+			const modal = document.querySelector("#modal");
+			const btnOpen = document.querySelector(".open");
+			const btnClose = document.querySelector(".close");
+
+			btnOpen.addEventListener("click", (e) => {
+				e.stopPropagation();
+				modal.showModal();
+			});
+
+			btnClose.addEventListener("click", () => modal.close());
+
+			document.addEventListener("click", (e) => {
+				if (e.target === modal) {
+					modal.close();
+				}
+			});
+		</script>
+	</body>
+</html>
