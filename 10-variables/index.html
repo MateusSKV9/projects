@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Variáveis com JS</title>
+		<style>
+			:root {
+				--defaultColor: #ff6f6f;
+			}
+			body {
+				color: var(--defaultColor);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Manipulando variáveis com JavaScript</h1>
+
+		<input type="color" name="color" id="color" title="Select a color" />
+
+		<script>
+			const colorInput = document.getElementById("color");
+
+			colorInput.addEventListener("input", (e) =>
+				document.documentElement.style.setProperty("--defaultColor", e.target.value)
+			);
+		</script>
+	</body>
+</html>
