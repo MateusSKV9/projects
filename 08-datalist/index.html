@@ -11,7 +11,7 @@
 
 		<section class="section-no-js">
 			<h3>Susgestões sem JavaScript</h3>
-			<form action="" class="linguages">
+			<form action="" class="linguages" autocomplete="off">
 				<label for="linguages">Qual é sua linguagem de programação <strong>favorita</strong>?</label>
 				<div>
 					<input type="text" name="linguages" id="linguages" list="linguages-list" placeholder="Type a language" />
@@ -30,7 +30,7 @@
 
 		<section>
 			<h3>Sugestões com JavaScript</h3>
-			<form class="container">
+			<form class="container" autocomplete="off">
 				<input type="text" id="input-lang" placeholder="Digite uma linguagem" />
 				<ul class="suggestions" id="suggestions"></ul>
 			</form>
@@ -40,7 +40,7 @@
 			<h3>Sugestões de datas</h3>
 			<input type="date" name="date" id="date" list="date-list" title="date" />
 
-      <small>Por algum motivo buga quando clica em "Outros"</small>
+			<small>Por algum motivo buga quando clica em "Outros"</small>
 
 			<datalist id="date-list">
 				<option value="2025-01-01"></option>
