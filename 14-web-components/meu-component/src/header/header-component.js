@@ -1,4 +1,5 @@
 import headerCss from "./header.css?raw"; // Importando o CSS como raw
+import headerHtml from "./header.html?raw";
 
 class MeuHeader extends HTMLElement {
 	constructor() {
@@ -7,10 +8,7 @@ class MeuHeader extends HTMLElement {
 
 		shadow.innerHTML = `
       <style>${headerCss}</style>
-
-      <header>
-        <h1>HEADER</h1>
-      </header>
+      ${headerHtml}
     `;
 	}
 }
