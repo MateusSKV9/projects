@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			::marker {
+				color: red;
+			}
+
+			.list1,
+			.list2 {
+				cursor: pointer;
+				font-size: 1.5em;
+			}
+
+			.list1 {
+				& li:hover {
+					&::marker {
+						color: blue;
+					}
+				}
+			}
+
+			.list2 {
+				& li {
+					transition: all 0.15s ease;
+
+					&::marker {
+						content: "✔️";
+					}
+
+					&:hover {
+						color: red;
+
+						&::marker {
+							content: "✅";
+						}
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list1">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<ul class="list2">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+
+		<script src="https://kit.fontawesome.com/0a1412cd70.js" crossorigin="anonymous"></script>
+	</body>
+</html>
