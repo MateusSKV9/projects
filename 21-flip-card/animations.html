@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Efeito de Card Flip em CSS</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background-color: #f0f0f0;
+				margin: 0;
+			}
+
+			.flip-card {
+				width: 300px;
+				height: 400px;
+				perspective: 1000px;
+				cursor: pointer;
+			}
+
+			.flip-card-inner {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				transition: transform 0.8s;
+				transform-style: preserve-3d;
+			}
+
+			.flip-card:hover .flip-card-inner {
+				transform: rotateY(180deg);
+			}
+
+			.flip-card-front,
+			.flip-card-back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				backface-visibility: hidden;
+				border-radius: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				box-sizing: border-box;
+			}
+
+			.flip-card-front {
+				background: linear-gradient(135deg, #3498db, #9b59b6);
+				color: white;
+			}
+
+			.flip-card-front img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			.flip-card-back {
+				background: linear-gradient(135deg, #2ecc71, #3498db);
+				color: white;
+				transform: rotateY(180deg);
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			.card-infor {
+				position: absolute;
+				border: 1px solid white;
+				box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+				bottom: -20px;
+				right: -20px;
+				background-color: #f6f6f6;
+				padding: 5px 30px 5px;
+				display: flex;
+				gap: 3px;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<img src="person01.jpg" alt="Person 01" />
+				</div>
+
+				<div class="flip-card-back">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptas minima laboriosam, nemo temporibus
+					</p>
+				</div>
+			</div>
+
+			<div class="card-infor">
+				<h2>Mario Andrade</h2>
+				<span>Gerente de Projeto</span>
+			</div>
+		</div>
+	</body>
+</html>
