@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Saídas em JavaScript</title>
+	</head>
+	<body>
+		<h1>JavaScript</h1>
+		<p>Meu primeiro parágrafo</p>
+
+		<div id="demo1"></div>
+		<p id="demo2"></p>
+
+		<button onclick="document.write('Apagou!')" type="button">write()</button>
+		<button onclick="alert('Alertou!')" type="button">Alert()</button>
+		<button onclick="print()" type="button">print()</button>
+
+		<br />
+
+		<script>
+			// innerHTML
+			const div = document.getElementById("demo1");
+			div.innerHTML = "<h4>Parágrafo com innerHTML</h4>";
+
+			// innerText
+			const p = document.getElementById("demo2");
+			p.innerText = "Parágrafo com innerText";
+
+			// document.write()
+			document.write("Escrito via write()"); // apaga tudo se o html estiver carregado
+
+			// alert()
+
+			// console.log()
+			console.log("Hello, World!");
+
+			// print()
+		</script>
+	</body>
+</html>
