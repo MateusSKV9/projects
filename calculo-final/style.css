@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 1.2rem;
+	background-color: whitesmoke;
+
+	padding: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	max-width: max-content;
+	width: 100%;
+}
+
+form {
+	min-width: 250px;
+	border-radius: 5px;
+	background-color: rgb(92, 92, 255);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 24px;
+
+	display: flex;
+	gap: 8px;
+
+	.form-group {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+
+		label {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		input {
+			width: 150px;
+			border-radius: 2px;
+			border: none;
+			padding: 8px;
+			font-size: 1.05rem;
+			font-weight: 600;
+		}
+	}
+
+	#btnVerificar {
+		all: unset;
+		transition: all 0.2s ease-in-out;
+		font-weight: 600;
+		font-size: 1.03rem;
+		padding: 8px;
+		border-radius: 3px;
+		background-color: white;
+		color: black;
+		text-align: center;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(42, 42, 42);
+			color: white;
+		}
+
+		&:active {
+			transform: scale(0.99);
+		}
+	}
+}
+
+.container-resultado {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	text-align: center;
+
+	h3 {
+		width: 100%;
+		background-color: white;
+		border-radius: 3px;
+		padding: 8px 16px;
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+
+		span {
+			color: rgb(255, 44, 44);
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	form {
+		flex-direction: column;
+
+		.form-group {
+			flex-direction: column;
+
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+
+	font-size: 1rem;
+	padding: 2px;
+	text-align: center;
+	width: 100%;
+	background-color: rgb(92, 92, 255);
+	color: white;
+
+	p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 4px;
+
+		a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-weight: 600;
+			position: relative;
+			transition: all 0.2s ease;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: -1px;
+				bottom: 0px;
+				z-index: 2;
+				transition: all 0.2s ease;
+				background-color: white;
+				width: 0%;
+				height: 100%;
+				z-index: -1;
+			}
+
+			&:hover {
+				color: rgb(92, 92, 255);
+			}
+
+			&:hover::before {
+				width: calc(100% + 2px);
+			}
+		}
+	}
+}

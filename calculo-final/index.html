@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cálculo da Final</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<form>
+				<div class="form-group">
+					<label for="iMediaGeral">Media Geral </label>
+					<input type="number" name="nota" id="iMediaGeral" placeholder="Formato 00.0" min="0" max="10" />
+				</div>
+
+				<input id="btnVerificar" type="submit" value="Verificar" />
+			</form>
+
+			<div class="container-resultado">
+				<p class="descricao-resultado hidden">Você precisar tirar uma nota na final maior que</p>
+				<h3 class="resultado hidden"></h3>
+			</div>
+		</main>
+
+		<footer>
+			<p>
+				<span>Desenvolvido por </span> <span><a href="">Mateus Santos</a></span>
+			</p>
+		</footer>
+
+		<script src="script.js" defer></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+	</body>
+</html>
