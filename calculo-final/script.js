@@ -1,8 +1,8 @@
+import { fireConfetti } from "./confetti.js";
+
 const descricaoResultado = document.querySelector(".descricao-resultado");
 const resultado = document.querySelector(".resultado");
 const btnVerificar = document.querySelector("#btnVerificar");
-const form = document.querySelector("form");
-let notaMediaFinal;
 
 btnVerificar.addEventListener("click", (e) => {
 	e.preventDefault();
@@ -27,20 +27,25 @@ function verificarNota() {
 
 	descricaoResultado.innerHTML = `Você precisa tirar uma nota <strong>maior ou igual</strong> a <strong>${notaProvaFinal.toFixed(
 		2
-	)}</strong> na prova final .`;
+	)}</strong> na prova final para passar.`;
 
 	resultado.innerHTML = `Prova Final >= <span>${notaProvaFinal.toFixed(2)}</span>`;
 }
 
 function passouDireto(mediaGeral) {
 	const resultado = document.querySelector(".resultado");
+	descricaoResultado.classList.add("hidden");
+	resultado.classList.remove("success");
+	resultado.classList.remove("lose");
+	resultado.classList.remove("hidden");
+
 	if (mediaGeral >= 7) {
-		resultado.classList.remove("hidden");
+		resultado.classList.add("success");
 		resultado.textContent = "Passou direto. Parabéns! 🤩";
 		fireConfetti();
 		return true;
 	} else if (mediaGeral <= 3) {
-		resultado.classList.remove("hidden");
+		resultado.classList.add("lose");
 		resultado.textContent = "Perdeu. Sinto Muito! 😥";
 		return true;
 	}
@@ -53,49 +58,11 @@ function entradaValida(inputMediaGeral) {
 	let menorQue0 = Number(inputMediaGeral.value) < 0;
 
 	if (isNull || menorQue0) {
-		alert(" ❌[ERRO]: Nota inválida!");
+		alert(" ❌[ERRO]: Média inválida!");
 		resultado.classList.add("hidden");
 		inputMediaGeral.value = "";
 		return false;
 	}
 
 	return true;
-}
-
-function fireConfetti() {
-	var count = 200;
-	var defaults = {
-		origin: { y: 0.7 },
-	};
-
-	function fire(particleRatio, opts) {
-		confetti({
-			...defaults,
-			...opts,
-			particleCount: Math.floor(count * particleRatio),
-		});
-	}
-
-	fire(0.25, {
-		spread: 26,
-		startVelocity: 55,
-	});
-	fire(0.2, {
-		spread: 60,
-	});
-	fire(0.35, {
-		spread: 100,
-		decay: 0.91,
-		scalar: 0.8,
-	});
-	fire(0.1, {
-		spread: 120,
-		startVelocity: 25,
-		decay: 0.92,
-		scalar: 1.2,
-	});
-	fire(0.1, {
-		spread: 120,
-		startVelocity: 45,
-	});
 }
