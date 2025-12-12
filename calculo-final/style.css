@@ -11,8 +11,6 @@ body {
 	font-size: 1.2rem;
 	background-color: whitesmoke;
 
-	padding: 20px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,35 +22,49 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	text-align: center;
 
 	max-width: max-content;
+	max-width: 500px;
 	width: 100%;
+	padding: 20px;
+
+	h1 {
+		text-shadow: 1px 2px white;
+		font-size: 2.1rem;
+	}
 }
 
 form {
-	min-width: 250px;
-	border-radius: 5px;
+	max-width: 500px;
+	width: 100%;
+	border-radius: 7px;
 	background-color: rgb(92, 92, 255);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 	color: white;
 	padding: 24px;
 
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 	gap: 8px;
 
 	.form-group {
+		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: 8px;
 
 		label {
+			width: max-content;
 			font-weight: 500;
 			font-size: 1.2rem;
 		}
 
 		input {
 			width: 150px;
+			flex-grow: 1;
 			border-radius: 2px;
 			border: none;
 			padding: 8px;
@@ -62,7 +74,7 @@ form {
 	}
 
 	#btnVerificar {
-		all: unset;
+		border: none;
 		transition: all 0.2s ease-in-out;
 		font-weight: 600;
 		font-size: 1.03rem;
@@ -90,19 +102,29 @@ form {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 16px;
+
 	text-align: center;
 
 	h3 {
 		width: 100%;
 		background-color: white;
-		border-radius: 3px;
+		border-radius: 0px 0px 7px 7px;
 		padding: 8px 16px;
-		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 
 		span {
 			color: rgb(255, 44, 44);
 		}
+	}
+
+	p {
+		font-size: 1.2rem;
+		background-color: rgb(255, 255, 255);
+		padding: 16px 12px;
+		border-radius: 7px 7px 0px 0px;
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+		border: 2px solid black;
+		border-color: transparent transparent black transparent;
 	}
 }
 
@@ -111,15 +133,26 @@ form {
 }
 
 @media screen and (max-width: 500px) {
+	main {
+		max-width: 400px;
+		width: 100%;
+	}
+
 	form {
+		width: 100%;
 		flex-direction: column;
 
 		.form-group {
+			width: 100%;
 			flex-direction: column;
 
 			input {
 				width: 100%;
 			}
+		}
+
+		#btnVerificar {
+			width: 100%;
 		}
 	}
 }
@@ -140,7 +173,7 @@ footer {
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 4px;
+		gap: 6px;
 
 		a {
 			text-decoration: none;
@@ -152,23 +185,60 @@ footer {
 			&::before {
 				content: "";
 				position: absolute;
-				left: -1px;
-				bottom: 0px;
+				left: -3px;
+				top: 0px;
 				z-index: 2;
-				transition: all 0.2s ease;
-				background-color: white;
-				width: 0%;
+				transition: all 0.3s ease-in-out;
+				background-color: rgb(36, 218, 246);
+				width: 1%;
 				height: 100%;
 				z-index: -1;
+				animation: pisca 0.5s ease-in-out alternate infinite;
 			}
+      &::after {
+        content: "";
+        position: absolute;
+        right: -3px;
+        top: 0px;
+        z-index: 2;
+        transition: all 0.2s ease-in-out;
+        background-color: rgb(36, 218, 246);
+        width: 1%;
+        height: 100%;
+        z-index: -1;
+        animation: pisca 0.5s ease-in-out alternate infinite;
+      }
 
 			&:hover {
 				color: rgb(92, 92, 255);
 			}
 
 			&:hover::before {
-				width: calc(100% + 2px);
+        animation: pisca 0.5s ease-in-out forwards;
+				background-color: white;
+				width: calc(50% + 4px);
+			}
+			&:hover::after {
+        animation: pisca 0.5s ease-in-out forwards;
+				background-color: white;
+				width: calc(50% + 4px);
 			}
 		}
+	}
+}
+
+.success {
+	border-bottom: 2px solid rgb(0, 255, 94);
+}
+.lose {
+	border-bottom: 2px solid rgb(255, 47, 0);
+}
+
+@keyframes pisca {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
