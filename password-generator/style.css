@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+	--fInter: "Inter", Arial, Helvetica, sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 1.2rem;
+	font-family: var(--fInter);
+}
+
+main {
+	max-width: 380px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+
+		background-color: whitesmoke;
+		padding: 20px;
+		border-radius: 7px;
+
+		.container-inputs {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			.form-group {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+
+				label {
+					cursor: pointer;
+				}
+
+				&:first-of-type {
+					margin-bottom: 4px;
+
+					label {
+						font-weight: 500;
+					}
+				}
+
+				input[type="checkbox"] {
+					cursor: pointer;
+					appearance: none;
+					width: 16px;
+					height: 16px;
+					border-radius: 2px;
+					background-color: white;
+					position: relative;
+					border: 1px solid black;
+
+					&:checked {
+						color: black;
+					}
+				}
+
+				input[type="checkbox"]:checked:before {
+					content: "";
+					position: absolute;
+					width: 6px;
+					height: 12px;
+					border-right: 3px solid black;
+					border-bottom: 3px solid black;
+					bottom: 2px;
+					left: 4px;
+					transform: rotate(45deg);
+				}
+
+				input[type="number"] {
+					flex-grow: 1;
+					width: 64px;
+					padding: 4px;
+					border-radius: 2px;
+					border: 1px solid black;
+				}
+			}
+		}
+
+		#btn-generate {
+			color: white;
+			background-color: rgb(36, 116, 253);
+			padding: 8px;
+			border-radius: 4px;
+			border: none;
+			font-weight: bold;
+			font-size: 1.1rem;
+			transition: all 0.15s ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgb(41, 41, 41);
+				color: white;
+				transform: scale(1.05);
+			}
+
+			&:active {
+				transform: scale(0.95);
+			}
+		}
+	}
+
+	.container-result {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 5px;
+		background-color: rgb(36, 116, 253);
+		color: white;
+		width: 100%;
+		padding: 16px;
+		gap: 10px;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		#result {
+			font-size: 1rem;
+			width: calc(100% - 25px);
+			overflow-wrap: anywhere;
+		}
+	}
+}
+
+.error {
+	border: 2px solid red !important;
+
+	&::placeholder {
+		text-align: center;
+		color: red;
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+svg {
+	width: 25px;
+	fill: white;
+}
