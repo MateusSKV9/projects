@@ -6,7 +6,7 @@
 </div>
 
 ## ℹ️ Sobre
-<p>Este repositório contém alguns projetos secundários de HTML, CSS & JavaScript.</p>
+<p>Este repositório contém alguns projetos secundários de <strong>HTML</strong>, <strong>CSS</strong> & <strong>JavaScript</strong>.</p>
 <p>Fique à vontade para explorar os projeots. Talvez algum seja útil para você ou sirva de espiraço.</p>
 
 ## 🎯 Objetivos
@@ -18,7 +18,7 @@
 
 ---
 
-# Projects
+## ✨ Projects
 
 | Status | Nº  |     Projeto      |                               Demo                                |                 Code                 |    Stack    |                           preview                            |
 | :----: | :-: | :--------------: | :---------------------------------------------------------------: | :----------------------------------: | :---------: | :----------------------------------------------------------: |
