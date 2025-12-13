@@ -10,15 +10,32 @@
 	box-sizing: border-box;
 }
 
+html {
+	animation: show 1s linear 1 forwards;
+}
+
 body {
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: white;
 	font-size: 1.2rem;
 	font-family: var(--fInter);
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+	background-size: 40px 40px;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 main {
@@ -27,6 +44,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+
+	h1 {
+		text-align: center;
+	}
 
 	form {
 		width: 100%;
@@ -132,10 +153,19 @@ main {
 		width: 100%;
 		padding: 16px;
 		gap: 10px;
+		transition: all 0.15s ease-in-out;
 
 		&:hover {
 			cursor: pointer;
+			transform: translateY(-5px);
+			box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.7);
 		}
+    
+    &:hover:active {
+      transform: translateY(0px);
+      box-shadow: 0px 0px 0px rgba(0, 0, 0);
+
+    }
 
 		#result {
 			font-size: 1rem;

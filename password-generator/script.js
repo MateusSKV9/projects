@@ -125,8 +125,6 @@ containerResult.addEventListener("click", () => {
 		.catch((err) => {
 			console.error("Erro ao copiar:", err);
 		});
-
-	alert(result.textContent);
 });
 
 containerResult.addEventListener("click", async () => {
@@ -137,5 +135,6 @@ containerResult.addEventListener("click", async () => {
 
 	setTimeout(() => {
 		result.innerText = password;
-	}, 2000);
+		result.disabled = true;
+	}, 1500);
 });
