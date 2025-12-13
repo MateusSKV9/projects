@@ -1,7 +1,7 @@
 <div align="center">
-  <img  width="400px" src="/html-logo.png" alt="Logo HTML">
-  <img  width="400px" src="/css-logo.png" alt="Logo CSS">
-  <img  width="400px" src="/javascript-logo.png" alt="Logo JavaScript">
+  <img  width="100px" src="/html-logo.png" alt="Logo HTML">
+  <img  width="100px" src="/css-logo.png" alt="Logo CSS">
+  <img  width="100px" src="/javascript-logo.png" alt="Logo JavaScript">
 </div>
 
 # Projects
