@@ -16,7 +16,7 @@ html {
 
 body {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,11 +46,11 @@ main {
 	justify-content: center;
 	align-items: center;
 	gap: 16px;
-	margin: 20px;
+	margin: 20px 30px 100px;
 
 	h1 {
-    margin-top: -50px;
-    font-size: 1.5rem;
+		margin-top: -50px;
+		font-size: 1.5rem;
 		text-align: center;
 	}
 
@@ -180,6 +180,76 @@ main {
 	}
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+
+	font-size: 1rem;
+	padding: 2px;
+	text-align: center;
+	width: 100%;
+	background-color: rgb(92, 92, 255);
+	color: white;
+
+	p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 6px;
+
+		a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-weight: 600;
+			position: relative;
+			transition: all 0.2s ease;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: -3px;
+				top: 0px;
+				z-index: 2;
+				transition: all 0.3s ease-in-out;
+				background-color: rgb(36, 218, 246);
+				width: 1%;
+				height: 100%;
+				z-index: -1;
+				animation: pisca 0.5s ease-in-out alternate infinite;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: -3px;
+				top: 0px;
+				z-index: 2;
+				transition: all 0.2s ease-in-out;
+				background-color: rgb(36, 218, 246);
+				width: 1%;
+				height: 100%;
+				z-index: -1;
+				animation: pisca 0.5s ease-in-out alternate infinite;
+			}
+
+			&:hover {
+				color: rgb(92, 92, 255);
+			}
+
+			&:hover::before {
+				animation: pisca 0.5s ease-in-out forwards;
+				background-color: white;
+				width: calc(50% + 4px);
+			}
+			&:hover::after {
+				animation: pisca 0.5s ease-in-out forwards;
+				background-color: white;
+				width: calc(50% + 4px);
+			}
+		}
+	}
+}
+
 .error {
 	border: 2px solid red !important;
 
@@ -199,6 +269,9 @@ svg {
 }
 
 @media screen and (max-width: 450px) {
+	body {
+		font-size: 1rem;
+	}
 	main {
 		form {
 			.container-inputs {
