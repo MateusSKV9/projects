@@ -9,7 +9,10 @@ body {
 	width: 100%;
 	min-height: 100vh;
 	font-size: 1.2rem;
-	background-color: whitesmoke;
+	background-color: white;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+	background-size: 40px 40px;
 
 	display: flex;
 	justify-content: center;
@@ -110,7 +113,7 @@ form {
 		background-color: white;
 		border-radius: 0px 0px 7px 7px;
 		padding: 8px 16px;
-		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
 
 		span {
 			color: rgb(255, 44, 44);
@@ -122,7 +125,7 @@ form {
 		background-color: rgb(255, 255, 255);
 		padding: 16px 12px;
 		border-radius: 7px 7px 0px 0px;
-		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
 		border: 2px solid black;
 		border-color: transparent transparent black transparent;
 	}
@@ -195,31 +198,31 @@ footer {
 				z-index: -1;
 				animation: pisca 0.5s ease-in-out alternate infinite;
 			}
-      &::after {
-        content: "";
-        position: absolute;
-        right: -3px;
-        top: 0px;
-        z-index: 2;
-        transition: all 0.2s ease-in-out;
-        background-color: rgb(36, 218, 246);
-        width: 1%;
-        height: 100%;
-        z-index: -1;
-        animation: pisca 0.5s ease-in-out alternate infinite;
-      }
+			&::after {
+				content: "";
+				position: absolute;
+				right: -3px;
+				top: 0px;
+				z-index: 2;
+				transition: all 0.2s ease-in-out;
+				background-color: rgb(36, 218, 246);
+				width: 1%;
+				height: 100%;
+				z-index: -1;
+				animation: pisca 0.5s ease-in-out alternate infinite;
+			}
 
 			&:hover {
 				color: rgb(92, 92, 255);
 			}
 
 			&:hover::before {
-        animation: pisca 0.5s ease-in-out forwards;
+				animation: pisca 0.5s ease-in-out forwards;
 				background-color: white;
 				width: calc(50% + 4px);
 			}
 			&:hover::after {
-        animation: pisca 0.5s ease-in-out forwards;
+				animation: pisca 0.5s ease-in-out forwards;
 				background-color: white;
 				width: calc(50% + 4px);
 			}
