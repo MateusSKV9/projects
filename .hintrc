@@ -8,9 +8,11 @@
       {
         "ignore": [
           "column-span",
-          "backdrop-filter"
+          "backdrop-filter",
+          "overflow-wrap: anywhere"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
