@@ -1,12 +1,24 @@
+
 <div align="center">
-  <img  width="100px" src="/html-logo.png" alt="Logo HTML">
-  <img  width="100px" src="/css-logo.png" alt="Logo CSS">
-  <img  width="100px" src="/javascript-logo.png" alt="Logo JavaScript">
+  <img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript">
+  <img align="center" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5">
+  <img align="center" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css">
 </div>
 
-# Projects
+## ℹ️ Sobre
+<p>Este repositório contém alguns projetos secundários de <strong>HTML</strong>, <strong>CSS</strong> & <strong>JavaScript</strong>.</p>
+<p>Fique à vontade para explorar os projeots. Talvez algum seja útil para você ou sirva de espiraço.</p>
 
-###
+## 🎯 Objetivos
+ - **Praticar** conhecimentos prévios
+ - Criar **funcionalidade úteis**
+ - Desenvolver **interfaces agradéveis** e **responsivas**
+ - Explorar **novos conhecimentos**
+ - **Aplicar** e aprender **boas práticas** de **programação**
+
+---
+
+## ✨ Projects
 
 | Status | Nº  |     Projeto      |                               Demo                                |                 Code                 |    Stack    |                           preview                            |
 | :----: | :-: | :--------------: | :---------------------------------------------------------------: | :----------------------------------: | :---------: | :----------------------------------------------------------: |
