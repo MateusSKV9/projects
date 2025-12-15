@@ -1,3 +1,4 @@
+<h1 align="center">JavaScript Courses</h1>
 
 <div align="center">
   <img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript">
