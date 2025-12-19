@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jogo da Forca</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<h1 id="title">Jogo da Forca</h1>
+
+		<div id="container-letters"></div>
+
+		<button id="btnNewWord" type="button">Nova palavra</button>
+
+		<div id="person">
+			<div id="head" class="hidden">
+				<div class="eye left hidden">
+					<span></span>
+					<span></span>
+				</div>
+				<div class="eye right hidden">
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<div id="body" class="hidden">
+				<div class="arm left hidden"></div>
+				<div class="arm right hidden"></div>
+				<div class="leg left hidden"></div>
+				<div class="leg right hidden"></div>
+			</div>
+		</div>
+
+		<div id="container-group">
+			<input
+				type="text"
+				name="inputLetter"
+				class="inputLetter"
+				id="inputLetter"
+				title="letter"
+				minlength="1"
+				maxlength="1"
+				autocomplete="off"
+			/>
+
+			<div id="container-buttons">
+				<button id="btnPlay" type="button">Tentar</button>
+				<button id="btnTip" type="button">
+					Dica
+
+					<span class="tip-icon">💡</span>
+				</button>
+			</div>
+			<p id="pSentLetters"></p>
+			<p id="tipContent" class="hidden"></p>
+		</div>
+
+		<div id="loading-container">
+			<div id="loading-box">
+				<div id="loading-spinner"></div>
+				<div id="loading-message">Carregando...</div>
+				<p id="loading-long-timer"></p>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+	</body>
+</html>
